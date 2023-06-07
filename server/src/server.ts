@@ -19,11 +19,11 @@ app.register(require('@fastify/static'), {
 })
 
 app.register(cors, {
-  origin: 'true', // todas as URLs de front-end podem acessar o back-end
+  origin: true,
 })
 
 app.register(jwt, {
-  secret: 'cun1093y502189nty19t9p0yt5r1p10c7n9151275091',
+  secret: 'spacetime',
 })
 
 app.register(authRoutes)
@@ -36,5 +36,5 @@ app
     host: '0.0.0.0',
   })
   .then(() => {
-    console.log('🚀 listening on http://localhost:3333')
+    console.log('🚀 HTTP server running on port http://localhost:3333')
   })
